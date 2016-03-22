@@ -1,0 +1,9 @@
+{
+  "react-router": "1.0.0-rc3",
+  "externalify": "0.1.0",
+  "searchkit": "0.8.3",
+  "deep-equal" : "1.0.0",
+  "invariant" : "2.0.0",
+  "query-string" : "3.0.0",
+  "warning" : "2.0.0"
+}
