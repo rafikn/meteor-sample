@@ -1,3 +1,5 @@
+const Link = ReactRouter.Link;
+
 class Header extends React.Component {
   render() {
     return (
@@ -17,9 +19,9 @@ class Header extends React.Component {
            <div className="collapse navbar-collapse" id="myNavbar">
              <ul className="nav navbar-nav navbar-right">
                <li><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login </a></li>
-               <li><a href="#"><span className="glyphicon glyphicon-user"></span> Register </a></li>
-               <li><a href="#"><span className="glyphicon glyphicon-question-sign"></span> Help </a></li>
-               <li><a href="#"><span className="glyphicon glyphicon-ok-sign"></span> List an Item </a></li>
+               <li><Link to="/register"><span className="glyphicon glyphicon-user"></span> Register </Link></li>
+               <li><Link to="/help"><span className="glyphicon glyphicon-question-sign"></span> Help </Link></li>
+               <li><Link to="/listItem"><span className="glyphicon glyphicon-ok-sign"></span> List an Item </Link></li>
              </ul>
            </div>
          </div>
