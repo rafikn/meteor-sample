@@ -1,12 +1,26 @@
 @import "bootstrap-variables.less";
 
+@content-padding:   40px;
+
 html, body {
   height: 100%;
   cursor: default;
 }
 
+select {
+  background: #fff url(/img/select.png) no-repeat right .75rem center;
+}
+
 #app {
   height: 100%;
+}
+
+.content {
+  background-image: url(/img/content-background.jpg);
+  background-color: #e3e3e3;
+  background-repeat: repeat;
+  margin-top: -@navbar-margin-bottom;
+  padding-top: @content-padding;
 }
 
 .fill {

@@ -22,3 +22,4 @@ insecure                # Allow all DB writes from clients (for prototyping)
 fortawesome:fontawesome
 less
 huttonr:bootstrap3
+react-meteor-data
