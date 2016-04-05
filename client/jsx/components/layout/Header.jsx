@@ -27,7 +27,8 @@ export default class Header extends React.Component {
                <li onClick={this.collapseMenu.bind(this)}><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login </a></li>
                <li onClick={this.collapseMenu.bind(this)}><Link to="/register"><span className="glyphicon glyphicon-user"></span> Register </Link></li>
                <li onClick={this.collapseMenu.bind(this)}><Link to="/help"><span className="glyphicon glyphicon-question-sign"></span> Help </Link></li>
-               <li onClick={this.collapseMenu.bind(this)} ><Link to="/listItem"><span className="glyphicon glyphicon-ok-sign"></span> List an Item </Link></li>
+               <li onClick={this.collapseMenu.bind(this)}><Link to="/listItem"><span className="glyphicon glyphicon-ok-sign"></span> List an Item </Link></li>
+               <li onClick={this.collapseMenu.bind(this)}><Link to="/browse"><span className="glyphicon glyphicon-ok-sign"></span> Browse </Link></li>
              </ul>
            </div>
          </div>
