@@ -1,4 +1,6 @@
-class Footer extends React.Component {
+import React from 'react';
+
+export default class Footer extends React.Component {
   render() {
     return (
       <footer>
@@ -28,9 +30,9 @@ class Footer extends React.Component {
 
               <div className="col-md-3">
                 <h4>Follow Us</h4>
-                <h5><a><i className="fa fa-facebook-official"></i> Facebook </a></h5>
-                <h5><a><i className="fa fa-twitter-square"></i> Twitter </a></h5>
-                <h5><a><i className="fa fa-linkedin-square"></i> LinkedIn </a></h5>
+                <h5><a target="_blank" href="https://www.facebook.com/whybuynz"><i className="fa fa-facebook-official"></i> Facebook </a></h5>
+                <h5><a target="_blank" href="https://twitter.com/WhybuyNZ"><i className="fa fa-twitter-square"></i> Twitter </a></h5>
+                <h5><a target="_blank" href="https://www.instagram.com/whybuynz/"><i className="fa fa-linkedin-square"></i> LinkedIn </a></h5>
               </div>
 
             </div>
@@ -39,5 +41,3 @@ class Footer extends React.Component {
     );
   }
 }
-
-this.Footer = Footer;

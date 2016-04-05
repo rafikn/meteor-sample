@@ -1,4 +1,6 @@
-class Help extends React.Component {
+import React from 'react';
+
+export default class Help extends React.Component {
 
   render() {
     return (
@@ -8,5 +10,3 @@ class Help extends React.Component {
     );
   }
 }
-
-this.Help = Help;
