@@ -1,6 +1,6 @@
 @import "bootstrap-variables.less";
 
-@content-padding:   40px;
+@content-padding:   20px;
 
 html, body {
   height: 100%;
@@ -21,6 +21,8 @@ select {
   background-repeat: repeat;
   margin-top: -@navbar-margin-bottom;
   padding-top: @content-padding;
+  min-height: 100%;
+  padding-bottom: @content-padding;
 }
 
 .fill {
@@ -56,3 +58,26 @@ footer a:hover {
   color: #e4e4e4;
   text-decoration: none;
 }
+
+.view-src-link {
+  position:fixed;
+  line-height:40px;
+  background:#eee;
+  right:10px;
+  bottom:10px;
+  text-decoration: none;
+  padding:0 20px;
+  border-radius: 3px;
+  color:#08c;
+  display:none;
+}
+
+.layout__results {
+   position:fixed;
+   top:0;
+   left:300px;
+   right:0;
+   bottom:0;
+   padding:0;
+   margin:0;
+ }
