@@ -1,6 +1,11 @@
 import React from 'react'
 import { Router, Route, Link } from 'react-router'
 
+
+
+import { SearchBox } from "searchkit";
+
+
 export default class Header extends React.Component {
 
   collapseMenu() {
@@ -18,12 +23,20 @@ export default class Header extends React.Component {
                <span className="icon-bar"></span>
                <span className="icon-bar"></span>
              </button>
-             <Link to="/">
+             <Link className="navbar-brand" to="/">
                  <img alt="WhyBuy" src="/img/logo-white.png" className="logo"/>
              </Link>
            </div>
            <div className="collapse navbar-collapse" id="myNavbar">
              <ul className="nav navbar-nav navbar-right">
+               <li onClick={this.collapseMenu.bind(this)}>
+                 <SearchBox
+                   translations={{"searchbox.placeholder":"Search Listings"}}
+                   queryOptions={{"minimum_should_match":"70%"}}
+                   autofocus={true}
+                   searchOnChange={true}
+                   queryFields={["actors^1","type^2","languages","title^5", "genres^2", "plot"]}/>
+               </li>
                <li onClick={this.collapseMenu.bind(this)}><a href="#"><span className="glyphicon glyphicon-log-in"></span> Login </a></li>
                <li onClick={this.collapseMenu.bind(this)}><Link to="/register"><span className="glyphicon glyphicon-user"></span> Register </Link></li>
                <li onClick={this.collapseMenu.bind(this)}><Link to="/help"><span className="glyphicon glyphicon-question-sign"></span> Help </Link></li>
