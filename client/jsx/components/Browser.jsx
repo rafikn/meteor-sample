@@ -23,7 +23,8 @@ import {
   ViewSwitcherHits,
   Layout, LayoutBody, LayoutResults,
   SideBar, TopBar,
-  ActionBar, ActionBarRow
+  ActionBar, ActionBarRow,
+  QueryAccessor
 } from "searchkit";
 
 
@@ -61,7 +62,8 @@ export const MovieHitsListItem = (props)=> {
 }
 
 
-export default class Browser extends React.Component<anu, any> {
+export default class Browser extends React.Component<any, any> {
+
 
   constructor() {
     super()
@@ -71,12 +73,16 @@ export default class Browser extends React.Component<anu, any> {
     this.searchkit.translateFunction = (key)=> {
       return {"pagination.next":"Next Page", "pagination.previous":"Previous Page"}[key]
     }
+
+    this.lastSearchMs = 0
+  }
+
+  componentDidUpdate() {
+    location.reload()
   }
 
 
   render(){
-
-    let { query } = this.props.location
     return (
 
 
