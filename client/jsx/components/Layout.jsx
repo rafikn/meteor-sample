@@ -19,16 +19,16 @@ export default class WhyBuy extends React.Component {
   render() {
     return (
       <div className="fill">
+        <div className="content" >
         <SearchkitProvider searchkit={this.searchkit}>
           <Layout size="l">
             <Header />
-
-            <LayoutBody>
-            </LayoutBody>
+            {this.props.children}
           </Layout>
         </SearchkitProvider>
+        </div>
 
-
+        <Footer />
       </div>
     );
   }

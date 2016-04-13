@@ -76,18 +76,9 @@ export default class Browser extends React.Component<anu, any> {
 
   render(){
 
+    let { query } = this.props.location
     return (
-      <SearchkitProvider searchkit={this.searchkit}>
-        <Layout size="l">
-          <TopBar>
-            <div className="my-logo">Searchkit Acme co</div>
-            <SearchBox
-              translations={{"searchbox.placeholder":"search movies"}}
-              queryOptions={{"minimum_should_match":"70%"}}
-              autofocus={true}
-              searchOnChange={true}
-              queryFields={["actors^1","type^2","languages","title^5", "genres^2", "plot"]}/>
-          </TopBar>
+
 
           <LayoutBody>
 
@@ -109,7 +100,9 @@ export default class Browser extends React.Component<anu, any> {
       			<LayoutResults>
 
               <ActionBar>
-
+                <ActionBarRow>
+                  <SearchBox searchOnChange={true} prefixQueryFields={["actors^1","type^2","languages","title^10"]} />
+                </ActionBarRow>
                 <ActionBarRow>
           				<HitsStats translations={{
                     "hitstats.results_found":"{hitCount} results found"
@@ -143,9 +136,7 @@ export default class Browser extends React.Component<anu, any> {
       				<Pagination showNumbers={true}/>
       			</LayoutResults>
           </LayoutBody>
-    			<a className="view-src-link" href="https://github.com/searchkit/searchkit-demo/blob/master/src/app/src/App.tsx">View source »</a>
-    		</Layout>
-      </SearchkitProvider>
+
 	)}
 
 }

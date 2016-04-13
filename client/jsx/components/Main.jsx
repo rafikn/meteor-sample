@@ -6,10 +6,8 @@ export default class Main extends React.Component {
 
     return (
 
-      <div className="search">
-          <div className="row search-wrapper">
-          hello from main
-        </div>
+      <div>
+        hello main
       </div>
 
     );
