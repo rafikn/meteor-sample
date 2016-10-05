@@ -1,2 +1,2 @@
-# whybuy
-Demo site for WhyBuy
+# meteor-sample
+Demo site using meteor
